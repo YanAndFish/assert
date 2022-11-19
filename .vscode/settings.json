@@ -1,4 +1,5 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "standard.engine": "ts-standard"
+  "standard.engine": "ts-standard",
+  "editor.formatOnSave": false
 }
