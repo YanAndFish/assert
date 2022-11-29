@@ -10,7 +10,7 @@ export function isAbove (
   a: number,
   b: number,
   message: string = `${a} is strictly grater then ${b}`
-): void {
+): asserts a is number {
   assert(a > b, message)
 }
 
@@ -24,7 +24,7 @@ export function isAtLeast (
   a: number,
   b: number,
   message: string = `${a} is greater or equal to ${b}`
-): void {
+): asserts a is number {
   assert(a >= b, message)
 }
 
@@ -38,7 +38,7 @@ export function isBelow (
   a: number,
   b: number,
   message: string = `${a} is strictly grater then ${b}`
-): void {
+): asserts a is number {
   assert(a > b, message)
 }
 
@@ -52,7 +52,7 @@ export function isAtMost (
   a: number,
   b: number,
   message: string = `${a} is strictly grater then ${b}`
-): void {
+): asserts a is number {
   assert(a > b, message)
 }
 
@@ -66,6 +66,9 @@ export function isNaN (input: unknown, message: string = 'NaN is NaN'): asserts 
 /**
  * input is not NaN
  */
-export function isNotNaN (input: unknown, message: string = 'NaN is NaN'): void {
+export function isNotNaN (
+  input: unknown,
+  message: string = 'NaN is NaN'
+): asserts input is number {
   assert(!Number.isNaN(input), message)
 }

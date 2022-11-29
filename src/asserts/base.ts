@@ -47,6 +47,11 @@ export function isVoid (
  */
 export const exists = isVoid
 
+/**
+ * input is not null and not undefined
+ * @param input
+ * @param message
+ */
 export const notExists = isNotVoid
 
 /**
